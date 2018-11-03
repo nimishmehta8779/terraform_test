@@ -1,6 +1,5 @@
 def pullRequest = false
 
-ansiColor('xterm') {
 
 node {
  step([$class: 'GitHubSetCommitStatusBuilder'])
@@ -26,6 +25,5 @@ env.PATH = "${tfHome}:${env.PATH}"
         sh "./terraform plan --out plan"
     stage name: 'deploy'
        sh "./terraform apply plan"
-}
 }
 
