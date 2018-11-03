@@ -1,11 +1,8 @@
-def userInput = true
-def didTimeout = false
-
-
 node {
-    stage 'checkout'
-       checkout scm
 
+    stage 'checkout' {
+       checkout scm
+}
 def tfHome = tool name: 'Terraform', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
 env.PATH = "${tfHome}:${env.PATH}"
 
