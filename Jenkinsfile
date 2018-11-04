@@ -7,12 +7,12 @@ node {
    git url: 'https://github.com/nimishmehta8779/terraform_test.git'
  
    // Get the Terraform tool.
-   def tfHome = tool name: 'Terraform', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
-   env.PATH = "${tfHome}:${env.PATH}"
+   // def tfHome = tool name: 'Terraform', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
+   // env.PATH = "${tfHome}:${env.PATH}"
    wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm']) {
  
            // Mark the code build 'plan'....
-           stage name: 'Plan', concurrency: 1
+         stage name: 'Plan', concurrency: 1
            // Output Terraform version
            sh "terraform --version"
            //Remove the terraform state file so we always start from a clean state
