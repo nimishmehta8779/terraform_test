@@ -3,8 +3,8 @@
 import jenkins.model.jenkins
 
 
-def input AWSAccessKey
-def input AWSSecretKey
+def inputaWSAccessKey
+def inputAWSSecretKey
 
 stage("Prompt user for Terraform variales") {
 script  {
