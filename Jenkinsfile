@@ -22,7 +22,7 @@ string (defaultValue:'',
     description: 'Secret key to AWS',
     name: 'SeceretKey'),
 
-    ] 
+    ]
 )
 
 inputAccessKey = userInput.AccessKey?:''
@@ -42,7 +42,7 @@ def basePath = './'
 ansiColor ('xterm') {
 stage ('Clean Workspace') {
 step ([$class: 'WScleanup'])
-    
+
 }
 
 stage('Pull Sourcecode') {
@@ -56,7 +56,7 @@ stage('Prepare workspace') {
     './terraform.d/plugins/linux_amd64/terraform-provider-aws_v1.42.0_x4'
     ]
 
-sh "chmod +x ./terraform-provide-*"
+sh "chmod +x ./terraform*"
 
 // unzip terraform zip file
 
@@ -85,5 +85,4 @@ catch (err)
 
 }
 }
-
 
