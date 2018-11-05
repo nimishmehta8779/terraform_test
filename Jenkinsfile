@@ -10,9 +10,9 @@ stage("Prompt user for Terraform variales") {
 script  {
 
 def userInput = input(
-id: 'userInput',message 'Enter the terraform variables:?',
+id: 'userInput',message:'Enter the terraform variables:?',
 
-    parameters: [
+    parameters:[
 
 string (defaultValue:'',
     description: 'Access key to AWS',
