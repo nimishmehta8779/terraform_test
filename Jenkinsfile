@@ -9,9 +9,9 @@ def inputAWSSecretKey
 stage("Prompt user for Terraform variales") {
 script  {
 
-def userInput = input (
-id: 'userInput', message 'Enter the terraform variables:?',
-[
+def userInput = input(
+id: 'userInput',message 'Enter the terraform variables:?',
+
     parameters: [
 
 string (defaultValue:'',
@@ -23,7 +23,7 @@ string (defaultValue:'',
     name: 'SeceretKey'),
 
     ] 
-])
+)
 
 inputAccessKey = userInput.AccessKey?:''
 inputAccessKey = userInput.AccessKey.trim()
