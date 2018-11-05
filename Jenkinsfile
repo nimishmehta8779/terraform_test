@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import jenkins.model.jenkins
+import jenkins.model.Jenkins
 
 
 def inputaWSAccessKey
