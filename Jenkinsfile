@@ -3,7 +3,7 @@
 import jenkins.model.Jenkins
 
 
-def inputaWSAccessKey
+def inputAWSAccessKey
 def inputAWSSecretKey
 
 stage("Prompt user for Terraform variales") {
@@ -52,15 +52,15 @@ stage('Pull Sourcecode') {
 
 stage('Prepare workspace') {
 
-    def artifacts = ['terraform_0.11.10_linux_amd64.zip',
-    'terraform.d/plugins/linux_amd64/terraform-provider-aws_v1.42.0_x4'
+    def artifacts = ['./terraform_0.11.10_linux_amd64.zip',
+    './terraform.d/plugins/linux_amd64/terraform-provider-aws_v1.42.0_x4'
     ]
 
-sh "chmod +x terraform-provide-*"
+sh "chmod +x ./terraform-provide-*"
 
 // unzip terraform zip file
 
-sh "unzip terraform_0.11.10_linux_amd64.zip"
+sh "unzip ./terraform_0.11.10_linux_amd64.zip"
 
 }
 
