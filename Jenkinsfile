@@ -39,7 +39,7 @@ inputSecretKey = userInput.SeceretKey?:''
 node {
 
 def basePath = './'
-ansiColor ('xterm') {
+//ansiColor ('xterm') {
 stage ('Clean Workspace') {
 step ([$class: 'WScleanup'])
 
