@@ -36,7 +36,7 @@ inputSecretKey = userInput.SeceretKey?:''
 }
 
 
-node("linux") {
+node {
 
 def basePath = './'
 ansiColor ('xterm') {
