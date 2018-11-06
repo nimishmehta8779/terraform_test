@@ -41,7 +41,7 @@ node {
 def basePath = './'
 //ansiColor ('xterm') {
 stage ('Clean Workspace') {
-step ([$class: 'WScleanup'])
+//step ([$class: 'WScleanup'])
 
 }
 
