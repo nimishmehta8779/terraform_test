@@ -26,10 +26,10 @@ string (defaultValue:'',
 )
 
 inputAccessKey = userInput.AccessKey?:''
-inputAccessKey = userInput.AccessKey.trim()
+//inputAccessKey = userInput.AccessKey.trim()
 
 inputSecretKey = userInput.SeceretKey?:''
-inputSecretKey = userInput.SecretKey.trim()
+//inputSecretKey = userInput.SecretKey.trim()
 
 }
 
