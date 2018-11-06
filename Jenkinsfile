@@ -53,7 +53,7 @@ stage('Pull Sourcecode') {
 stage('Prepare workspace') {
 
     def artifacts = ['./terraform_0.11.10_linux_amd64.zip',
-    './terraform.d/plugins/linux_amd64/terraform-provider-aws_v1.42.0_x4'
+    './.terraform/plugins/linux_amd64/terraform-provider-aws_v1.42.0_x4'
     ]
 
 sh "chmod +x ./terraform*"
