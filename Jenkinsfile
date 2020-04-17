@@ -65,8 +65,8 @@ sh "unzip ./terraform_0.11.10_linux_amd64.zip"
 }
 
 stage('Terraform plan') {
-
-sh "./terraform init -plugin-dir=terraform.d/plugins/linux_amd64/ -get-plugins=true "
+//sh "./terraform init -plugin-dir=terraform.d/plugins/linux_amd64/ -get-plugins=true "
+sh "./terraform init"
 sh "./terraform plan -var aws_access_key=$inputAccessKey -var aws_secret_key=$inputSecretKey"
 
 }
